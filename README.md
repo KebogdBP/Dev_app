@@ -18,13 +18,12 @@ Internet → [Port 80] → Nginx (Reverse Proxy) → [Internal Network] → Back
 4. Backend обрабатывает запрос и возвращает JSON-строку
 5. Nginx передает ответ пользователю с правильными заголовками
 
-## 🚀 Быстрый старт
+## Быстрый старт
 
 ### Клонирование и запуск
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/your-username/effective-mobile-app.git
-cd effective-mobile-app
+git clone https://https://github.com/KebogdBP/Dev_app.git
 
 # Запустить сервисы
 docker compose up -d
@@ -57,7 +56,7 @@ docker compose down
 - Nginx 1.25 Alpine
 
 - Docker & Docker Compose
-
+```
 
 ## Создайте .env файл (шаблон)
 
@@ -67,4 +66,4 @@ NGINX_PORT=80
 BACKEND_PORT=8080
 PYTHONUNBUFFERED=1
 EOF
-
+```
