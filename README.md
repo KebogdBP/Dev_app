@@ -12,7 +12,7 @@
 Internet → [Port 80] → Nginx (Reverse Proxy) → [Internal Network] → Backend (Python HTTP Server:8080)
 
 ### Схема взаимодействия:
-1. Пользователь отправляет HTTP-запрос на `http://localhost:80`
+1. Пользователь отправляет HTTP-запрос на `http://localhost`
 2. Nginx принимает запрос и проверяет health endpoint
 3. Nginx проксирует запрос на backend:8080 через внутреннюю сеть
 4. Backend обрабатывает запрос и возвращает JSON-строку
@@ -38,3 +38,33 @@ curl http://localhost
 
 # Остановка
 docker compose down
+
+# Структура проекта
+.
+├── backend/
+│   ├── Dockerfile
+│   └── app.py
+├── nginx/
+│   └── nginx.conf
+├── docker-compose.yml
+├── .env
+├── .gitignore
+└── README.md
+
+# Технологии
+- Python 3.11 Alpine
+
+- Nginx 1.25 Alpine
+
+- Docker & Docker Compose
+
+
+## Создайте .env файл (шаблон)
+
+```bash
+cat > .env << 'EOF'
+NGINX_PORT=80
+BACKEND_PORT=8080
+PYTHONUNBUFFERED=1
+EOF
+
