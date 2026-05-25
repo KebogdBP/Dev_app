@@ -52,9 +52,7 @@ docker compose down
 
 # Технологии
 - Python 3.11 Alpine
-
 - Nginx 1.25 Alpine
-
 - Docker & Docker Compose
 ```
 
